@@ -1,0 +1,76 @@
+@import 'fonts.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
+
+body {
+  background-color: darkred;
+  margin: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: initial;
+}
+
+#main_table td {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: yellow;
+}
+
+.scrolling-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.scrolling-text {
+  display: inline-block;
+  animation: scroll-left 20s linear infinite;
+}
+
+.bg-menu-bg-gradient {
+  background-image: url('/images/menu_bg_gradient.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 6px 8px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+@keyframes scroll-left {
+  0% {
+      transform: translateX(115%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
